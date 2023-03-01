@@ -1,17 +1,13 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-// const Root = () => {
-//   return <Outlet />;
-// };
+// Components
+import TopNavigation from "../components/TopNavigation/TopNavigation";
+
 const Root = () => {
   return (
     <>
       {/* Add navigation bar here */}
-      <div>
-        <Link to="/data">Data Page</Link>
-        <Link to="/about">About Page</Link>
-        <br />
-      </div>
+      <TopNavigation />
 
       {/* Outlet - this renders sites */}
       <Outlet />
