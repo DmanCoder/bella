@@ -46,9 +46,9 @@ const TopNavigation = () => {
         </div>
       </div>
 
-      {/* <div className="cta__circle">
-        <div className="cta__circle--logo"></div>
-      </div> */}
+      <div className="hero__circular">
+        <div className="hero__circular-logo"></div>
+      </div>
     </header>
   );
 };

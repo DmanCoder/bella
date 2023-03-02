@@ -6,7 +6,7 @@ import "./BackgroundFill.scss";
 const BackgroundFill = () => {
   return (
     <aside
-      class="fill-background"
+      className="fill-background"
       style={{ backgroundColor: "#acb7ae" }}
     ></aside>
   );

@@ -47,6 +47,28 @@
     opacity: 0.4;
     pointer-events: none;
   }
+
+  &__circular {
+    width: 7.7vw;
+    height: 7.7vw;
+    position: absolute;
+    top: auto;
+    bottom: -3.8vw;
+    left: 58%;
+    background: url("../../assets/img/img_logo.svg") no-repeat center;
+    background-size: 50% 50%;
+  }
+
+  &__circular-logo {
+    width: 7.7vw;
+    height: 7.7vw;
+    background: url("../../assets/img/img_scroll-badge.svg") no-repeat center;
+    background-size: 100% 100%;
+    animation: rotation 45s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 // GALLERY
