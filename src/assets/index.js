@@ -1,4 +1,10 @@
+// Logos
 import PrimaryLogo from "./logos/primary-logo.svg";
+
+// Images
+import SunsetLarge from "./img/sunset-large.jpg";
+import LampLarge from "./img/lamp-large.jpg";
+import LogCabinLarge from "./img/log-cabin-large.jpg";
 
 const Assets = {
   Logos: {
@@ -28,12 +34,11 @@ const Assets = {
   //   Language,
   //   TvCast,
   // },
-  // imgs: {
-  //   AustraliaFlag,
-  //   CanadaFlag,
-  //   UnitedKingdom,
-  //   UnitedStates,
-  // },
+  Imgs: {
+    SunsetLarge,
+    LampLarge,
+    LogCabinLarge,
+  },
 };
 
 export default Assets;

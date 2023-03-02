@@ -17,29 +17,29 @@ const TopNavigation = () => {
       <nav className="nav">
         <ul className="nav__list">
           <li className="nav__list-item">
-            <a href="#0" className="nav__list-anchor">
+            <Link to="/about" className="nav__list-anchor">
               Our Values
-            </a>
+            </Link>
           </li>
           <li className="nav__list-item">
-            <a href="#0" className="nav__list-anchor">
+            <Link to="/about" className="nav__list-anchor">
               Portfolio
-            </a>
+            </Link>
           </li>
           <li className="nav__list-item">
-            <a href="#0" className="nav__list-anchor">
+            <Link to="/about" className="nav__list-anchor">
               Blog
-            </a>
+            </Link>
           </li>
           <li className="nav__list-item">
-            <a href="#0" className="nav__list-anchor">
+            <Link to="/about" className="nav__list-anchor">
               How We Work
-            </a>
+            </Link>
           </li>
           <li className="nav__list-item">
-            <a href="#0" className="nav__list-anchor">
+            <Link to="/about" className="nav__list-anchor">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
