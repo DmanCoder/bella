@@ -45,6 +45,13 @@ const TopNavigation = () => {
       </nav>
 
       {/* Hamburger */}
+      <div className="burger">
+        <button className="burger__wrapper">
+          <span className="burger__bar"></span>
+          <span className="burger__bar"></span>
+          <span className="burger__bar"></span>
+        </button>
+      </div>
     </React.Fragment>
   );
 };
