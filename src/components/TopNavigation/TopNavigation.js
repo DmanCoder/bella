@@ -8,7 +8,7 @@ import useAnimateAnchorLink from "./useAnimateAnchorLink";
 import "./TopNavigation.scss";
 
 const TopNavigation = () => {
-  const { anchorLinks, onMouseLeave } = useAnimateAnchorLink();
+  const { onMouseLeave, currentHoverLink } = useAnimateAnchorLink();
 
   return (
     <React.Fragment>
@@ -23,50 +23,60 @@ const TopNavigation = () => {
         <ul className="nav__list">
           <li className="nav__list-item">
             <Link
-              ref={(el) => anchorLinks.current.push(el)}
               onMouseLeave={onMouseLeave}
+              data-nav="about"
               to="/about"
-              className="nav__list-anchor"
+              className={`nav__list-anchor ${
+                currentHoverLink === "about" ? "animate-out" : ""
+              }`}
             >
               Our Values
             </Link>
           </li>
           <li className="nav__list-item">
             <Link
-              ref={(el) => anchorLinks.current.push(el)}
               onMouseLeave={onMouseLeave}
-              to="/about"
-              className="nav__list-anchor"
+              data-nav="portfolio"
+              to="/portfolio"
+              className={`nav__list-anchor ${
+                currentHoverLink === "portfolio" ? "animate-out" : ""
+              }`}
             >
               Portfolio
             </Link>
           </li>
           <li className="nav__list-item">
             <Link
-              ref={(el) => anchorLinks.current.push(el)}
               onMouseLeave={onMouseLeave}
-              to="/about"
-              className="nav__list-anchor"
+              data-nav="blog"
+              to="/blog"
+              className={`nav__list-anchor ${
+                currentHoverLink === "blog" ? "animate-out" : ""
+              }`}
             >
               Blog
             </Link>
           </li>
           <li className="nav__list-item">
             <Link
-              ref={(el) => anchorLinks.current.push(el)}
               onMouseLeave={onMouseLeave}
-              to="/about"
-              className="nav__list-anchor"
+              data-nav="works"
+              to="/works"
+              className={`nav__list-anchor ${
+                currentHoverLink === "works" ? "animate-out" : ""
+              }`}
             >
               How We Work
             </Link>
           </li>
           <li className="nav__list-item">
             <Link
-              ref={(el) => anchorLinks.current.push(el)}
               onMouseLeave={onMouseLeave}
+              data-nav="contact"
               to="/about"
-              className="nav__list-anchor"
+              className={`nav__list-anchor ${
+                currentHoverLink === "contact" ? "animate-out" : ""
+              }`}
             >
               Contact
             </Link>

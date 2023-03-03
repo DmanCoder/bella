@@ -1,22 +1,23 @@
 import React from "react";
 
 const useAnimateAnchorLink = () => {
-  const anchorLinks = React.useRef([]);
-
-  React.useEffect(() => {
-    console.log(anchorLinks.current);
-  }, []);
+  const [currentHoverLink, setCurrentHoverLink] = React.useState("");
 
   const onMouseLeave = (event) => {
-    event.target.classList.add("animate-out");
+    // Get custom data attribute
+    const currentNavLink = event.target.getAttribute("data-nav");
+
+    setCurrentHoverLink(currentNavLink);
+
+    // Set back to default
     setTimeout(() => {
-      event.target.classList.remove("animate-out");
+      setCurrentHoverLink("");
     }, 300);
   };
 
   return {
-    anchorLinks,
     onMouseLeave,
+    currentHoverLink,
   };
 };
 
