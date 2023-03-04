@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 
 // Custom hooks
 import useAnimateAnchorLink from "./useAnimateAnchorLink";
+import useAnimateNavigationOnScroll from "./useAnimateNavigationOnScroll";
 
 // Styles
 import "./TopNavigation.scss";
 
 const TopNavigation = () => {
   const { onMouseLeave, currentHoverLink } = useAnimateAnchorLink();
+  const { addAnchorLinkItemsToRefs } = useAnimateNavigationOnScroll();
 
   return (
     <React.Fragment>
@@ -23,6 +25,7 @@ const TopNavigation = () => {
         <ul className="nav__list">
           <li className="nav__list-item">
             <Link
+              ref={addAnchorLinkItemsToRefs}
               onMouseLeave={onMouseLeave}
               data-nav="about"
               to="/about"
@@ -35,6 +38,7 @@ const TopNavigation = () => {
           </li>
           <li className="nav__list-item">
             <Link
+              ref={addAnchorLinkItemsToRefs}
               onMouseLeave={onMouseLeave}
               data-nav="portfolio"
               to="/portfolio"
@@ -47,6 +51,7 @@ const TopNavigation = () => {
           </li>
           <li className="nav__list-item">
             <Link
+              ref={addAnchorLinkItemsToRefs}
               onMouseLeave={onMouseLeave}
               data-nav="blog"
               to="/blog"
@@ -59,6 +64,7 @@ const TopNavigation = () => {
           </li>
           <li className="nav__list-item">
             <Link
+              ref={addAnchorLinkItemsToRefs}
               onMouseLeave={onMouseLeave}
               data-nav="works"
               to="/works"
@@ -71,6 +77,7 @@ const TopNavigation = () => {
           </li>
           <li className="nav__list-item">
             <Link
+              ref={addAnchorLinkItemsToRefs}
               onMouseLeave={onMouseLeave}
               data-nav="contact"
               to="/about"

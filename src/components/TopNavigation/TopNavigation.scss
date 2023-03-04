@@ -115,3 +115,16 @@
     display: block;
   }
 }
+
+/* Scroll trigger: Reveal logo and move buger when the user scrolls */
+.has-scrolled .burger {
+  transform: translateX(100%);
+}
+
+.has-scrolled .logo__img {
+  opacity: 1;
+}
+
+.has-scrolled .logo__text {
+  opacity: 0;
+}
