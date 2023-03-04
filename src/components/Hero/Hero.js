@@ -9,7 +9,12 @@ import useAnimateHeaderTilt from "./useAnimateHeaderTilt";
 import "./Hero.scss";
 
 const TopNavigation = () => {
-  const { onMoveImages } = useAnimateHeaderTilt();
+  const {
+    circleRefs,
+    onMoveImages,
+    addLeftFigureImagesToRefs,
+    addRightFigureImagesToRefs,
+  } = useAnimateHeaderTilt();
 
   return (
     <header data-color="#ACB7AE" className="hero" onMouseMove={onMoveImages}>
@@ -23,29 +28,47 @@ const TopNavigation = () => {
         VOLUPTAS AUT <br />& VERITASIS NOSTRUM
       </p>
 
-      <div className="hero__circle"></div>
+      <div ref={circleRefs} className="hero__circle"></div>
 
       <div className="gallery">
         <div className="gallery__item-left">
-          <figure className="gallery__figure gallery__figure--l">
+          <figure
+            ref={addLeftFigureImagesToRefs}
+            className="gallery__figure gallery__figure--l"
+          >
             <img src={Assets.Imgs.SunsetLarge} alt="Beautiful" />
           </figure>
-          <figure className="gallery__figure gallery__figure--m">
+          <figure
+            ref={addLeftFigureImagesToRefs}
+            className="gallery__figure gallery__figure--m"
+          >
             <img src={Assets.Imgs.LampLarge} alt="test" />
           </figure>
-          <figure className="gallery__figure gallery__figure--s">
+          <figure
+            ref={addLeftFigureImagesToRefs}
+            className="gallery__figure gallery__figure--s"
+          >
             <img src={Assets.Imgs.LogCabinLarge} alt="test" />
           </figure>
         </div>
 
         <div className="gallery__item-right">
-          <figure className="gallery__figure gallery__figure--l">
+          <figure
+            ref={addRightFigureImagesToRefs}
+            className="gallery__figure gallery__figure--l"
+          >
             <img src={Assets.Imgs.LogCabinLarge} alt="test" />
           </figure>
-          <figure className="gallery__figure gallery__figure--m">
+          <figure
+            ref={addRightFigureImagesToRefs}
+            className="gallery__figure gallery__figure--m"
+          >
             <img src={Assets.Imgs.SunsetLarge} alt="test" />
           </figure>
-          <figure className="gallery__figure gallery__figure--s">
+          <figure
+            ref={addRightFigureImagesToRefs}
+            className="gallery__figure gallery__figure--s"
+          >
             <img src={Assets.Imgs.LampLarge} alt="test" />
           </figure>
         </div>

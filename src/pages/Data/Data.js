@@ -5,7 +5,6 @@ import { Link, useLoaderData, useNavigation } from "react-router-dom";
 const Data = () => {
   const dogURL = useLoaderData();
   const navigate = useNavigation();
-  console.log(navigate, "navigatenavigate");
 
   if (navigate.state === "loading") {
     return <h2>Loading...</h2>;
