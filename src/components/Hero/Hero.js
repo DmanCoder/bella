@@ -2,12 +2,17 @@ import React from "react";
 
 import Assets from "../../assets";
 
+// Custom Hooks
+import useAnimateHeaderTilt from "./useAnimateHeaderTilt";
+
 // Styles
 import "./Hero.scss";
 
 const TopNavigation = () => {
+  const { onMoveImages } = useAnimateHeaderTilt();
+
   return (
-    <header data-color="#ACB7AE" className="hero">
+    <header data-color="#ACB7AE" className="hero" onMouseMove={onMoveImages}>
       <h1 className="hero__title">
         <span className="hero__title-text">Consectetur</span>
         <span className="hero__title-text">Adipisicing</span>

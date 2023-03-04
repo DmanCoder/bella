@@ -57,6 +57,7 @@
     left: 58%;
     background: url("../../assets/img/img_logo.svg") no-repeat center;
     background-size: 50% 50%;
+    pointer-events: none;
   }
 
   &__circular-logo {

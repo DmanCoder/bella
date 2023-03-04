@@ -18,7 +18,7 @@ const useAnimateNavigationOnScroll = () => {
       },
       onEnter: anchorLinksAnimation,
       onLeaveBack: anchorLinksAnimation,
-      markers: true,
+      // markers: true,
     });
   }, []);
 
